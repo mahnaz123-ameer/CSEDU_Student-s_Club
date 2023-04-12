@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -150,7 +151,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [BASE_DIR / 'assets']
-MEDIA_ROOT = os.path.join(BASE_DIR / '\CSEDUSC\assets\media1/')
+MEDIA_ROOT = os.path.join(BASE_DIR / 'media1')
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
