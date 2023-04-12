@@ -150,7 +150,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATICFILES_DIRS = [BASE_DIR / 'assets']
-MEDIA_ROOT = BASE_DIR / '\CSEDUSC\assets\images/'
+MEDIA_ROOT = BASE_DIR / '\CSEDUSC\assets\media1/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
