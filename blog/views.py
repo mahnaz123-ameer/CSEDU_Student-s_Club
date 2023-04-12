@@ -314,3 +314,6 @@ def update_blog(request, slug):
         "blog": blog
     }
     return render(request, 'update_blog.html', context)
+
+def about(request):
+    return render(request,'about.html')
