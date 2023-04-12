@@ -6,7 +6,7 @@ from .slugs import generate_unique_slug
 
 from ckeditor.fields import RichTextField
 
-
+'''
 class Category(models.Model):
     title = models.CharField(max_length=150, unique=True)
     slug = models.SlugField(null=True, blank=True)
@@ -19,7 +19,8 @@ class Category(models.Model):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
-
+'''
+'''
 class Tag(models.Model):
     title = models.CharField(max_length=150)
     slug = models.SlugField(null=True, blank=True)
@@ -31,8 +32,8 @@ class Tag(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
-
-
+'''
+'''
 class Blog(models.Model):
     user = models.ForeignKey(
         User,
@@ -75,7 +76,7 @@ class Blog(models.Model):
             self.slug = generate_unique_slug(self, self.title)
             super().save(*args, **kwargs)
 
-
+'''
 class Comment(models.Model):
     user = models.ForeignKey(
         User,
