@@ -12,10 +12,11 @@ class User(AbstractUser):
             "unique": "The email must be unique"
         }
     )
+    
     profile_image = models.ImageField(
         null=True,
         blank=True,
-        upload_to="profile_images"
+        upload_to="profile_image"
     )
     followers = models.ManyToManyField("Follow")
 
