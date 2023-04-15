@@ -317,5 +317,3 @@ def update_blog(request, slug):
 
 def about(request):
     return render(request,'about.html')
-def alumni(request):
-    return render(request,'alumni.html')
