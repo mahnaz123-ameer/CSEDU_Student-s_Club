@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from django.views.decorators.cache import never_cache
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
+from django.contrib.auth.models import User
 
 from .forms import (
     UserRegistrationForm,
@@ -198,3 +200,7 @@ def mute_or_unmute_user(request, user_id):
 
     return redirect('view_user_information', username=user.username)
 
+def alumni(request):
+    users = User.objects.all()
+    context = {'users': users}
+    return render(request,'alumni.html',context)
