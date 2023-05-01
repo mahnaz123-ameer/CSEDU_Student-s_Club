@@ -14,9 +14,9 @@
                             <li class="py-2">
                                 <span><strong>{{account.first_name}}</strong></span>
                             </li>
-                             <li class="py-2">
+                             {% comment %} <li class="py-2">
                                 <span> Batch - <strong>25</strong></span>
-                            </li>
+                            </li> {% endcomment %}
                             <li class="py-2">
                                 <span><strong>{{account.last_name}}</strong></span>
                             </li>
@@ -86,7 +86,7 @@
                         {% endfor %}
                         {% endif %}
                         <div class="form-group">
-                            <label for="firstname">Full Name</label>
+                            <label for="firstname">Full Name(Session/Batch)</label>
                             <input class="form-control" name="first_name"  value="{{account.first_name}}" type="text">
                             <p class="text-danger error py-1">{{form.first_name.errors}}</p>
                         </div>
@@ -95,21 +95,21 @@
                             <input class="form-control" name="last_name"  value="{{account.last_name}}" type="text">
                             <p class="text-danger error py-1">{{form.last_name.errors}}</p>
                         </div>
-                        <div class="form-group">
+                        {% comment %} <div class="form-group">
                             <label for="batch">Batch</label>
                             <input class="form-control" name="batch"  value="{{account.batch}}" type="text">
                             <p class="text-danger error py-1">{{form.batch.errors}}</p>
-                        </div>
+                        </div> {% endcomment %}
                         {% comment %} <div class="form-group">
                             <label for="session">Session</label>
                             <input class="form-control" name="session"  value="{{account.session}}" type="text">
                             <p class="text-danger error py-1">{{form.session.errors}}</p>
                         </div> {% endcomment %}
-                        <div class="form-group">
+                        {% comment %} <div class="form-group">
                             <label for="session">Session</label>
                             <input class="form-control" name="session"  value="{{account.profile.session}}" type="text">
                             <p class="text-danger error py-1">{{form.session.errors}}</p>
-                        </div>
+                        </div> {% endcomment %}
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input class="form-control" name="username"  value="{{account.username}}" type="text">
